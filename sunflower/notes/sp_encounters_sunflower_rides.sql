@@ -23,8 +23,8 @@ group by 1,2
 
 
 
-CREATE PROCEDURE srh_encounters.sp_encounters_sunflower_rides()
- LANGUAGE plpgsql
+CREATE OR REPLACE PROCEDURE srh_encounters.sp_encounters_sunflower_rides_expenses()
+LANGUAGE plpgsql
 AS $$
 
 DECLARE

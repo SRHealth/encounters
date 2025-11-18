@@ -1,0 +1,180 @@
+CREATE OR REPLACE VIEW srh_edifecs_dev.tx_tchp_encounters_431
+AS
+SELECT 
+  '431' as c_431_rec
+, 'SR' || lpad(ird.ride_id, 16, '0') as c_431_key
+, '87726' as c_2430_svd01_cobprimarypayerid__ -- plan code here 
+, coalesce(ird.trip_cost, 0) + coalesce(ird.adjustment_amount, 0) as c_2430_svd02_cobservicepaidamount
+, '' as c_431_claimlinedisposition
+, 'HC' as c_2430_svd03_01_servicecodetype
+,  vtpc.procedure_code as c_2430_svd03_02_servicecode 
+, '' as c_2430_svd03_03_servicemodifier1
+, '' as c_2430_svd03_04_servicemodifier2
+, '' as c_2430_svd03_05_servicemodifier3
+, '' as c_2430_svd03_06_servicemodifier4
+, '' as c_2430_svd03_07_servicecodedescription
+, '' as c_2430_svd04_revenuecode
+, ird.mileage as c_2430_svd05_quantity
+, '' as c_2430_svd06_bundledlinenumber
+, '' as c_2430_lineleveldenial_1
+, '' as c_2430_lineleveldenial_2
+, '' as c_2430_lineleveldenial_3
+, '' as c_2430_lineleveldenial_4
+, '' as c_2430_lineleveldenial_5
+, '' as c_2430_lineleveldenial_6
+, '' as c_2430_lineleveldenial_7
+, '' as c_2430_lineleveldenial_8
+, '' as c_2430_lineleveldenial_9
+, '' as c_2430_lineleveldenial_10
+, 'CAS' as c_2430_cas01_claimadjustmentgroup_1
+, 'CO' as c_2430_cas02_claimadjustmentreason_1
+, '' as c_2430_cas03_claimadjustmentamount_1
+, '' as c_2430_cas04_claimadjustmentquantity_1
+, '' as c_2430_cas05_claimadjustmentreason_1
+, '' as c_2430_cas06_claimadjustmentamount_1
+, '' as c_2430_cas07_claimadjustmentquantity_1
+, '' as c_2430_cas08_claimadjustmentreason_1
+, '' as c_2430_cas09_claimadjustmentamount_1
+, '' as c_2430_cas10_claimadjustmentquantity_1
+, '' as c_2430_cas11_claimadjustmentreason_1
+, '' as c_2430_cas12_claimadjustmentamount_1
+, '' as c_2430_cas13_claimadjustmentquantity_1
+, '' as c_2430_cas14_claimadjustmentreason_1
+, '' as c_2430_cas15_claimadjustmentamount_1
+, '' as c_2430_cas16_claimadjustmentquantity_1
+, '' as c_2430_cas17_claimadjustmentreason_1
+, '' as c_2430_cas18_claimadjustmentamount_1
+, '' as c_2430_cas19_claimadjustmentquantity_1
+, '' as c_2430_cas01_claimadjustmentgroup_2
+, '' as c_2430_cas02_claimadjustmentreason_2
+, '' as c_2430_cas03_claimadjustmentamount_2
+, '' as c_2430_cas04_claimadjustmentquantity_2
+, '' as c_2430_cas05_claimadjustmentreason_2
+, '' as c_2430_cas06_claimadjustmentamount_2
+, '' as c_2430_cas07_claimadjustmentquantity_2
+, '' as c_2430_cas08_claimadjustmentreason_2
+, '' as c_2430_cas09_claimadjustmentamount_2
+, '' as c_2430_cas10_claimadjustmentquantity_2
+, '' as c_2430_cas11_claimadjustmentreason_2
+, '' as c_2430_cas12_claimadjustmentamount_2
+, '' as c_2430_cas13_claimadjustmentquantity_2
+, '' as c_2430_cas14_claimadjustmentreason_2
+, '' as c_2430_cas15_claimadjustmentamount_2
+, '' as c_2430_cas16_claimadjustmentquantity_2
+, '' as c_2430_cas17_claimadjustmentreason_2
+, '' as c_2430_cas18_claimadjustmentamount_2
+, '' as c_2430_cas19_claimadjustmentquantity_2
+, '' as c_2430_cas01_claimadjustmentgroup_3
+, '' as c_2430_cas02_claimadjustmentreason_3
+, '' as c_2430_cas03_claimadjustmentamount_3
+, '' as c_2430_cas04_claimadjustmentquantity_3
+, '' as c_2430_cas05_claimadjustmentreason_3
+, '' as c_2430_cas06_claimadjustmentamount_3
+, '' as c_2430_cas07_claimadjustmentquantity_3
+, '' as c_2430_cas08_claimadjustmentreason_3
+, '' as c_2430_cas09_claimadjustmentamount_3
+, '' as c_2430_cas10_claimadjustmentquantity_3
+, '' as c_2430_cas11_claimadjustmentreason_3
+, '' as c_2430_cas12_claimadjustmentamount_3
+, '' as c_2430_cas13_claimadjustmentquantity_3
+, '' as c_2430_cas14_claimadjustmentreason_3
+, '' as c_2430_cas15_claimadjustmentamount_3
+, '' as c_2430_cas16_claimadjustmentquantity_3
+, '' as c_2430_cas17_claimadjustmentreason_3
+, '' as c_2430_cas18_claimadjustmentamount_3
+, '' as c_2430_cas19_claimadjustmentquantity_3
+, '' as c_2430_cas01_claimadjustmentgroup_4
+, '' as c_2430_cas02_claimadjustmentreason_4
+, '' as c_2430_cas03_claimadjustmentamount_4
+, '' as c_2430_cas04_claimadjustmentquantity_4
+, '' as c_2430_cas05_claimadjustmentreason_4
+, '' as c_2430_cas06_claimadjustmentamount_4
+, '' as c_2430_cas07_claimadjustmentquantity_4
+, '' as c_2430_cas08_claimadjustmentreason_4
+, '' as c_2430_cas09_claimadjustmentamount_4
+, '' as c_2430_cas10_claimadjustmentquantity_4
+, '' as c_2430_cas11_claimadjustmentreason_4
+, '' as c_2430_cas12_claimadjustmentamount_4
+, '' as c_2430_cas13_claimadjustmentquantity_4
+, '' as c_2430_cas14_claimadjustmentreason_4
+, '' as c_2430_cas15_claimadjustmentamount_4
+, '' as c_2430_cas16_claimadjustmentquantity_4
+, '' as c_2430_cas17_claimadjustmentreason_4
+, '' as c_2430_cas18_claimadjustmentamount_4
+, '' as c_2430_cas19_claimadjustmentquantity_4
+, '' as c_2430_cas01_claimadjustmentgroup_5
+, '' as c_2430_cas02_claimadjustmentreason_5
+, '' as c_2430_cas03_claimadjustmentamount_5
+, '' as c_2430_cas04_claimadjustmentquantity_5
+, '' as c_2430_cas05_claimadjustmentreason_5
+, '' as c_2430_cas06_claimadjustmentamount_5
+, '' as c_2430_cas07_claimadjustmentquantity_5
+, '' as c_2430_cas08_claimadjustmentreason_5
+, '' as c_2430_cas09_claimadjustmentamount_5
+, '' as c_2430_cas10_claimadjustmentquantity_5
+, '' as c_2430_cas11_claimadjustmentreason_5
+, '' as c_2430_cas12_claimadjustmentamount_5
+, '' as c_2430_cas13_claimadjustmentquantity_5
+, '' as c_2430_cas14_claimadjustmentreason_5
+, '' as c_2430_cas15_claimadjustmentamount_5
+, '' as c_2430_cas16_claimadjustmentquantity_5
+, '' as c_2430_cas17_claimadjustmentreason_5
+, '' as c_2430_cas18_claimadjustmentamount_5
+, '' as c_2430_cas19_claimadjustmentquantity_5
+, '573' as c_2430_dtp01_datetimequalifier
+, 'D8' as c_2430_dtp02_datetimeformat
+, to_char(ird.reporting_end_date::date, 'YYYYMMDD') as c_2430_dtp03_servicepaiddate -- circle back later Date when Claim was paid or finalized. 
+, '' as c_2430_amt01_amountqualifier
+, '' as c_2430_amt02_patientliabilityamount
+, '' as c_431_allowed_amount
+, '' as c_eob_code
+, '' as c_accommodationcode
+, ird.ride_id as c_431_filler_03
+, '' as c_431_filler_04
+, '' as c_431_filler_05
+, '' as c_431_filler_06
+, '' as c_431_filler_07
+, '' as c_431_filler_08
+, '' as c_431_filler_09
+, '' as c_431_filler_10
+, '' as c_431_filler_11
+, '' as c_431_filler_12
+, '' as c_431_filler_13
+, '' as c_431_filler_14
+, '' as c_431_filler_15
+, '' as c_431__recipientaidcategory
+, '' as c_431_withholdamount
+, '' as c_431_service_class
+, '' as c_431_rateincreaseindicator
+, '' as c_431_bundleindicator
+, '' as c_431_bundleclaimnumber
+, '' as c_431_bundleclaimserviceline
+, '' as c_allowedunitquantity
+, '' as c_allowedunitamount
+, '' as c_835lq02_11_remarkcode1
+, '' as c_835lq02_11_remarkcode2
+, '' as c_835lq02_11_remarkcode3
+, '' as c_835lq02_21_remarkcode1
+, '' as c_835lq02_21_remarkcode2
+, '' as c_835lq02_21_remarkcode3
+, '' as c_835lq02_31_remarkcode1
+, '' as c_835lq02_31_remarkcode2
+, '' as c_835lq02_31_remarkcode3    
+FROM
+  srh_edifecs_dev.careprovider_invoice_ride_details ird
+
+  inner join src_rds_saferide.rides r
+    on r.id = ird.ride_id
+  left join src_rds_saferide.vehicle_company vc
+    on vc.id = r.vehiclownerid 
+  left join src_rds_saferide.drivers d
+    on d.id = r.driverid
+  left join srh_ie2_ds.srh_mapping.vehicle_type_procedure_code vtpc 
+  	on vtpc.vehicle_type = ird.transport
+
+WHERE      
+1=1
+and ird.zero_cost_ride = 0 and ird.transport in ('AMB','WCV')
+AND ird.hospital_group_id = 238
+
+WITH NO SCHEMA BINDING;

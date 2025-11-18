@@ -39,7 +39,7 @@ def convert_nulls_to_strings(obj):
         # Convert everything else to string
         return str(obj)
 
-def fetch_and_upload_to_s3(connection_params, s3_bucket, s3_prefix="extracted_jsons", rows_per_file=2500, aws_credentials=None):
+def fetch_and_upload_to_s3(connection_params, s3_bucket, s3_prefix="extracted_jsons", rows_per_file=1500, aws_credentials=None):
     """
     Fetch data from Redshift and upload to S3 as JSON files with specified row limits
     
@@ -64,8 +64,8 @@ def fetch_and_upload_to_s3(connection_params, s3_bucket, s3_prefix="extracted_js
     and e.toState is not null
     and e.insuredZip is not null
     and e.insuredAddress is not null
+    and e.insuredzip <> 'State'
 
-    limit 3000
     ;
 
     """
